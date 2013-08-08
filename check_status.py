@@ -16,6 +16,6 @@ if __name__ == '__main__':
         if args.output_format == 'json':
             print status.getServicesStatus() 
         else:
-            data = json.loads(status.getServicesStatus(services)) 
+            data = json.loads(status.getServicesStatus()) 
             for svc in data:
                 print "{} ({}): {}".format(svc['service'], svc['port'], status.printStatus(svc['status']))

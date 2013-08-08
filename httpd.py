@@ -10,11 +10,15 @@ class LocalStatus(object):
                 </head>
                 <html>
                 <body>
+                    <script src="static/jquery-2.0.3.js"></script>
+                    <script src="static/status.js"></script>
                     <h1>Status of Aurora on your local machine</h1> 
+                    <div id="counter">counter</div>
                 </body>
                 </html>"""
     
     def status(self):
+        cherrypy.response.headers['Content-Type']= 'application/json'
         return status.getServicesStatus() 
 
     index.exposed = True
