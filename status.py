@@ -25,15 +25,21 @@ def isPortOpen(port, host="localhost"):
     except:
         return False
 
-def serviceRunning(port):
-    if isPortOpen(port):
+def serviceRunning(port, host):
+    if isPortOpen(port, host):
         return "RUNNING"
     else:
         return "DOWN"
 
 def checkServiceStatus(service):
-    (name, port) = service.split(':')
-    return {"service": name, "port": port, "status": serviceRunning(port)}
+    name = service['service']
+    port = service['port']
+    if 'host' in service:
+        host = service['host']
+    else:
+        host = 'localhost'
+
+    return {"service": name, "port": port, "status": serviceRunning(port, host)}
    
 def getServicesStatus():
     f = open("services.yaml", 'r')

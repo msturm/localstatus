@@ -7,13 +7,14 @@ class LocalStatus(object):
         return """<html>
                 <head>
                     <title>Aurora local status</title>
+                    <link href="static/status.css" rel="stylesheet" type="text/css" />
                 </head>
                 <html>
                 <body>
                     <script src="static/jquery-2.0.3.js"></script>
                     <script src="static/status.js"></script>
                     <h1>Status of Aurora on your local machine</h1> 
-                    <div id="counter">counter</div>
+                    <div id="counter">&nbsp;<div>
                 </body>
                 </html>"""
     
