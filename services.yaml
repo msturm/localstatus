@@ -18,3 +18,35 @@ services:
     - service: voyager-query
       port: 4246
       host: devsolaris
+    
+    - service: apache
+      port: 80
+
+    - service: cas-buyside
+      port: 10460
+
+    - service: suma-directory-search
+      port: 10510
+
+    - service: test-mailbox
+      port: 9001
+
+    - service: mock-services
+      port: 9089
+
+    - service: inmotive-mock
+      port: 9002
+
+    - service: pbm
+      port: 9003
+
+    - service: aurora-frontend
+      port: 8080
+
+    - service: mobile-web-frontend
+      port: 8082
+
+    - service: rbs-notification-frontend
+      port: 8081
+
+
