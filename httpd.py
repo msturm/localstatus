@@ -11,10 +11,12 @@ class LocalStatus(object):
                 </head>
                 <html>
                 <body>
+                    <h1>Status of Aurora on your local machine</h1> 
+                    <form><input type="checkbox" name="show-notifications" id="show-notifications"><label for="show-notifications">Show notifications</label></form>
+                    <div id="counter">&nbsp;</div>
+                    <div id="log">&nbsp;</div>
                     <script src="static/jquery-2.0.3.js"></script>
                     <script src="static/status.js"></script>
-                    <h1>Status of Aurora on your local machine</h1> 
-                    <div id="counter">&nbsp;<div>
                 </body>
                 </html>"""
     
