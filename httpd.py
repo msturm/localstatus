@@ -37,5 +37,6 @@ class LocalStatusHttpd:
                     'tools.staticdir.index': 'index.html',
                 },
         })
+        cherrypy.log.screen = None
         cherrypy.config.update({'server.socket_port': 5747})
         cherrypy.quickstart(LocalStatus())

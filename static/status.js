@@ -20,7 +20,7 @@ function refreshStatus() {
                 
                 if (oldStatus[serviceName] !== undefined && oldStatus[serviceName] !== service.status) {
                     notify(serviceName, service.status);
-                    logField.append('<div>' + serviceName + ' changed from ' + oldStatus[serviceName] + ' to ' + service.status + '</div>');   
+                    logField.append('<div>' + new Date().toLocaleTimeString() + " - " + serviceName + ' changed from ' + oldStatus[serviceName] + ' to ' + service.status + '</div>');   
                 }
                 oldStatus[serviceName] = service.status;
                 result += '<tr><td>' + serviceName + '</td><td><img src="' + status + '" height="12"></td></tr>' 
@@ -51,5 +51,5 @@ function requestNotificationPermission() {
 }
 
 $('#show-notifications').bind('click', requestNotificationPermission);
-window.setInterval(refreshStatus(), 2000);
+window.setInterval(refreshStatus(), 1000);
 
